@@ -1,0 +1,37 @@
+.wheel-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 6px solid #333;
+    position: relative;
+    margin: 20px auto;
+    transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+    background: conic-gradient(#ff7675 0deg 60deg, #74b9ff 60deg 120deg, #55efc4 120deg 180deg, #ffeaa7 180deg 240deg, #a29bfe 240deg 300deg, #fd79a8 300deg 360deg);
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+}
+
+.segment span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: rotate(30deg);
+}
+
+.pointer {
+    font-size: 24px;
+}

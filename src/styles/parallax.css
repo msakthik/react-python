@@ -1,0 +1,84 @@
+/* HERO */
+.hero {
+    position: relative;
+    height: 180vh;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    will-change: transform;
+}
+
+.bg {
+    z-index: 1;
+}
+
+.mountain {
+    z-index: 2;
+    top: 20%;
+}
+
+.person {
+    z-index: 3;
+    bottom: 0;
+    width: 40%;
+    left: 30%;
+}
+
+.heroText {
+    position: absolute;
+    z-index: 5;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+}
+
+/* FEATURE SECTION */
+.featureWrapper {
+    height: 250vh;
+    background: #0b0f19;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone {
+    width: 280px;
+    z-index: 3;
+}
+
+.card {
+    position: absolute;
+    padding: 20px 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .25);
+    font-weight: 600;
+}
+
+.card1 {
+    left: 15%;
+}
+
+.card2 {
+    right: 15%;
+}
+
+/* OUTRO */
+.outro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}

@@ -1,0 +1,20 @@
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    /* ⭐ MAGIC */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    font-size: 2rem;
+}

@@ -1,0 +1,24 @@
+CMS frontend:
+26-12-2025-bug-fixes
+Add Reject Option for Group Booking in Admin Login with Refund Handling
+Add All Recharge History Page in Statement Module 
+
+CMS backend:
+Users Sales Executive Edit Sales Executive Deactivation Not Working as Expected
+Group Booking Approval/Rejection Notification Not Received in Agency Portal
+Add All Recharge History Page in Statement Module 
+
+agency frontend:
+23-12-2025-bug-fixes
+Group Booking Approval/Rejection Notification Not Received in Agency Portal
+
+agency backend:
+group-booking-bugs
+
+
+commands:
+git branch -D feature/login
+git push origin --delete feature/login
+git reset --merge HEAD~1
+run command: ngrok http 9017
+git reset --soft HEAD~1
