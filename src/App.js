@@ -2,6 +2,7 @@ import './App.css';
 import ParallaxSection from './components/parallaxScroll/ParallaxSection';
 // import Home from './pages/Home';
 import Outro from './sections/Outro';
+import "./style.scss";
 
 function App() {
   return (

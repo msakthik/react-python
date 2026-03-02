@@ -1,0 +1,146 @@
+@use "variables";
+@use "./variables" as v;
+@use "./variables" as *;
+@use "sass:map";
+@use "sass:math";
+@use "sass:color";
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  @include flex-center;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+.card {
+  @include size(200px, 100px);
+}
+
+@mixin radius($r: 8px) {
+  border-radius: $r;
+}
+
+.box {
+  @include radius;
+}
+
+%card-base {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile {
+  @extend %card-base;
+}
+
+@function rem($px) {
+  @return $px / 16px * 1rem;
+}
+
+@function text-color($bg) {
+  @if lightness($bg)>50 {
+    @return black;
+  }
+
+  @else {
+    @return white;
+  }
+}
+
+@each $color in variables.$colors1 {
+  .text-#{$color} {
+    color: $color;
+  }
+}
+
+$i: 1;
+
+@for $i from 1 through 5 {
+  .m-#{$i} {
+    margin: #{$i * 5}px;
+  }
+}
+
+@while $i < 4 {
+  .p-#{$i} {
+    padding: #{$i * 10}px;
+  }
+
+  $i: $i + 1;
+}
+
+@function rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
+
+.button {
+  background: map-get(v.$colors, primary);
+  color: color.adjust($color, $lightness: 20%), color.scale($color, $lightness: 40%);
+  height: math.percentage(math.div(1, 3));
+}
+
+@each $name, $color in v.$colors {
+  .btn-#{$name} {
+    background: $color;
+  }
+}
+
+$themes: (
+  light: white,
+  dark: black
+);
+
+@each $name, $color in $themes {
+  .theme-#{$name} {
+    background: $color;
+  }
+}
+
+@function color($name) {
+  @return map-get(v.$colors, $name);
+}
+
+.title {
+  background: color(primary);
+  font-size: rem(24px);
+}
+
+$primary-color: #0d6efd;
+$font-size: 16px;
+
+.button {
+  background: $primary-color;
+  font-size: $font-size;
+  color: lighten(blue, 20%);
+  width: percentage(1/3);
+}
+
+.nav {
+  ul {
+    li {
+      a {
+        color: red;
+      }
+    }
+  }
+}
+
+.button {
+  background: blue;
+
+  &:hover {
+    background: darkblue;
+  }
+
+  &.active {
+    border: 2px solid white;
+  }
+}
