@@ -3,8 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import * as Sentry from "@sentry/react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+Sentry.init({
+  dsn: "https://46bdb2eedd0992afa59de154003a973d@o4510997396783104.ingest.us.sentry.io/4510997399666688",
+  // Setting this option to true will send default PII data to Sentry.
+  // For example, automatic IP address collection on events
+  sendDefaultPii: true
+});
+
 root.render(
   <React.StrictMode>
     <App />
