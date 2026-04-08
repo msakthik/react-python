@@ -83,7 +83,7 @@ $i: 1;
 
 .button {
   background: map-get(v.$colors, primary);
-  color: color.adjust($color, $lightness: 20%), color.scale($color, $lightness: 40%);
+  // color: color.adjust($color, $lightness: 20%), color.scale($color, $lightness: 40%);
   height: math.percentage(math.div(1, 3));
 }
 

@@ -1,4 +1,5 @@
 import './App.css';
+import Honeycomb from './components/framer-motion/honeycomb';
 import ParallaxSection from './components/parallaxScroll/ParallaxSection';
 // import Home from './pages/Home';
 import Outro from './sections/Outro';
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       {/* <Home /> */}
+      <Honeycomb />
       <div className="App">
         <ParallaxSection image={'http://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg'}>
           Welcome to Dream Travel
