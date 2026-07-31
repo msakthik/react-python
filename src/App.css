@@ -41,3 +41,19 @@
     transform: rotate(360deg);
   }
 }
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: tomato;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: royalblue;
+  display: inline-block;
+  margin: 6px;
+}

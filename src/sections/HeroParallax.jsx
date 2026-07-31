@@ -15,9 +15,9 @@ export default function HeroParallax() {
     return (
         <section className="hero">
 
-            <motion.img src="/assets/bg.jpg" className="layer bg" style={{ y: bg }} />
-            <motion.img src="/assets/mountain.png" className="layer mountain" style={{ y: mountain }} />
-            <motion.img src="/assets/person.png" className="layer person" style={{ y: person }} />
+            <motion.img src={"/bg.jpeg"} className="layer bg" style={{ y: bg }} />
+            <motion.img src={"/mountain.png"} className="layer mountain" style={{ y: mountain }} />
+            <motion.img src={"/person.png"} className="layer person" style={{ y: person }} />
 
             <motion.div className="heroText" style={{ y: text, opacity }}>
                 <h1>Explore The World</h1>
